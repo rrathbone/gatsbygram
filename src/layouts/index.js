@@ -8,7 +8,7 @@ import "typeface-space-mono"
 
 import { rhythm, scale } from "../utils/typography"
 import presets from "../utils/presets"
-import Modal from "../components/modal"
+import Modal from "../components/initial/modal"
 
 class DefaultLayout extends React.Component {
   static propTypes = {

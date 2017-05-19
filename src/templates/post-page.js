@@ -1,6 +1,6 @@
 import * as PropTypes from "prop-types"
 import React from "react"
-import PostDetail from "../components/post-detail"
+import PostDetail from "../components/initial/post-detail"
 
 class PostTemplate extends React.Component {
   static propTypes = {

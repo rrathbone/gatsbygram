@@ -4,8 +4,8 @@ import React from "react"
 
 import { rhythm, scale } from "../utils/typography"
 import presets from "../utils/presets"
-import Avatar from "../components/Avatar"
-import Post from "../components/post"
+import Avatar from "../components/initial/Avatar"
+import Post from "../components/initial/post"
 
 // This would normally be in a Redux store or some other global data store.
 if (typeof window !== `undefined`) {

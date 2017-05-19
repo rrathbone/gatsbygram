@@ -1,6 +1,6 @@
 import * as PropTypes from "prop-types"
 import React from "react"
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../../utils/typography"
 
 const propTypes = {
   user: PropTypes.shape({

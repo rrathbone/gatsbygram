@@ -8,7 +8,7 @@ import mousetrap from "mousetrap"
 import * as PropTypes from "prop-types"
 import { navigateTo } from "gatsby-link"
 
-import { rhythm } from "../utils/typography"
+import { rhythm } from "../../utils/typography"
 
 class GatsbyGramModal extends React.Component {
   static propTypes = {

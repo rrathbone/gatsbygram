@@ -1,7 +1,7 @@
 import React from "react"
 
-import presets from "../utils/presets"
-import typography, { rhythm, scale } from "../utils/typography"
+import presets from "../../utils/presets"
+import typography, { rhythm, scale } from "../../utils/typography"
 
 class PostDetail extends React.Component {
   constructor() {

@@ -3,8 +3,8 @@ import React from "react"
 import HeartIcon from "react-icons/lib/fa/heart"
 import Link from "gatsby-link"
 
-import { rhythm, scale } from "../utils/typography"
-import presets from "../utils/presets"
+import { rhythm, scale } from "../../utils/typography"
+import presets from "../../utils/presets"
 
 let touched = false
 
