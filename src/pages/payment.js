@@ -7,7 +7,7 @@
 //
 // import PaymentForm from './paymentForm'
 //
-// class AddPayment extends Component {
+// class Payment extends Component {
 //   constructor(props) {
 //     super(props)
 //
@@ -144,7 +144,7 @@
 //   }
 // }
 //
-// AddPayment.contextTypes = {
+// Payment.contextTypes = {
 //   router: PropTypes.object
 // }
 //
@@ -170,4 +170,4 @@
 //   }
 // }
 //
-// export default connect(mapStateToProps, mapDispatchToProps)(AddPayment)
+// export default connect(mapStateToProps, mapDispatchToProps)(Payment)

@@ -1,0 +1,95 @@
+.nav {
+  background: $migo-green;
+  padding-top: 0.3em;
+
+  .navbar {
+    margin-bottom: 0;
+    width: 80%;
+    margin: auto;
+    height: 4.5em;
+    margin-top: -1em;
+  }
+
+  .navbar-nav {
+    float: right;
+    text-align: center;
+    height: 7.5em;
+    padding-top: 1em;
+  }
+
+  a.nav-link {
+    color: $footer-nav-text;
+    font-size: $p-size;
+    font-weight: bold;
+    margin-top: 0.35em;
+  }
+
+  @mixin on-event($color, $background: none) {
+		&:hover,
+		&:active,
+		&:focus {
+			color: $color;
+			background: $background;
+			@content;
+		}
+	}
+
+  ul li:hover ul {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .nav > li {
+    a {
+      height: 4.2em;
+      margin-top: -0.6em;
+      padding-top: 1.6em;
+      min-width: 100px;
+    }
+
+    a:hover {
+      @include on-event($footer-nav-text, $migo-blue);
+
+      text-decoration: none;
+    }
+
+    ul {
+      padding: 0;
+      position: absolute;
+      top: 6.42em;
+      left: 0;
+      width: 150px;
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+      display: none;
+      opacity: 0;
+      visibility: hidden;
+      -webkit-transiton: opacity 0.2s;
+      -moz-transition: opacity 0.2s;
+      -ms-transition: opacity 0.2s;
+    }
+
+    .inner-links.first {
+      padding-top: 0.8em;
+    }
+
+    .inner-links {
+      background: $footer-grey;
+      display: block;
+      color: $footer-nav-text;
+      font-size: $p-size;
+      padding: 0 0 1.1em 1.4em;
+      text-align: left;
+      width: 10em;
+    }
+
+    .inner-links:hover {
+      @include on-event($migo-green, $footer-grey);
+
+      cursor: pointer;
+      text-decoration: none;
+    }
+  }
+}

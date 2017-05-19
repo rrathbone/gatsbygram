@@ -1,0 +1,25 @@
+// Modules and Variables
+@import "partials/base";
+
+// Partials
+@import "modules/all";
+
+$migo-logo-size: 7em;
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 100% $font-stack;
+  background: $primary-color;
+  min-height: 100vh;
+}
+
+.container {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.migo-logo {
+  width: $migo-logo-size;
+}

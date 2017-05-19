@@ -1,0 +1,99 @@
+.footer {
+  background: $footer-grey;
+
+  footer {
+    margin-left: 20em;
+    margin-right: 12em;
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
+
+  .footer-links, .footer-city-links {
+    color: $footer-nav-text;
+    margin-top: 0.3em;
+
+    @include on-event($migo-green);
+  }
+
+  .footer-links {
+    font-size: $p-size;
+  }
+
+  .footer-city-links {
+    font-size: 1.5rem;
+  }
+
+  .col-md-2.links, .col-md-4.links {
+    padding-top: 1em;
+  }
+
+  .row.btns {
+    text-align: center;
+  }
+
+  .footer-app-btn {
+    width: 14em;
+  }
+
+  #apple-footer {
+    margin-top: 0.3em;
+  }
+
+  #google-footer {
+    margin-top: 3em;
+  }
+
+  #migo-social {
+    margin-left: 3em;
+  }
+
+  #social-media {
+    margin-left: 0.5em;
+    margin-top: 1em;
+  }
+
+  .migo-logo.footer {
+    width: 20em;
+  }
+
+	.social-media-icons {
+    &:hover {
+      background: $migo-green;
+    }
+
+		color: $footer-nav-text;
+		background: $migo-blue;
+		font-size: 2.55em;
+		padding: 0.4em;
+		min-width: 2em;
+		min-height: 1.8em;
+    text-align: center;
+	  border-radius: 0.1em;
+		margin-right: 0.2em;
+		margin-left: 0.2em;
+	}
+
+  .divider {
+    background: $footer-nav-text;
+    height: 0.07em;
+    width: 83%;
+    margin: 5em 5em;
+  }
+
+  #city-footer > .col-md-2 {
+    width: 14%;
+  }
+
+  #city-footer > h5 {
+    color: $footer-nav-text;
+    font-size: $h5-size;
+    font-weight: bold;
+    padding-left: 2.5em;
+    text-decoration: underline;
+    margin-bottom: 1em;
+  }
+  
+  ul {
+    display: grid;
+  }
+}

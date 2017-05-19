@@ -1,0 +1,27 @@
+.breadcrumbs {
+  font-size: 1.5rem;
+  margin-top: 3em;
+
+  ul {
+    display: flex;
+    padding-left: 0;
+
+    li {
+
+      a {
+        color: darken($footer-grey, 40%);
+
+        &:hover {
+          text-decoration: none;
+          color: $migo-green;
+        }
+
+      }
+      span {
+        margin-left: 0.3em;
+        margin-right: 0.6em;
+      }
+    }
+  }
+
+}

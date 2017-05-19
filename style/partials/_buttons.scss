@@ -1,0 +1,16 @@
+@mixin button($width, $height, $background, $color, $margin, $font-size) {
+	width: $width;
+	height: $height;
+	background: $background;
+	color: $color;
+	margin: $margin;
+	font-size: $font-size;
+
+	// text-transform: uppercase;
+	border-radius: 0.4rem;
+	border: 0;
+	font-weight: 600;
+	letter-spacing: 0.06em;
+
+  @content;
+}

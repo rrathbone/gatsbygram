@@ -1,0 +1,89 @@
+.connect-services-select {
+  text-align: center;
+  padding-top: 9em;
+  width: 70%;
+  margin: auto;
+
+  img {
+    width: 40%;
+    border-radius: 50%;
+    margin-bottom: 3em;
+  }
+
+  .service-btn {
+    @include button(15em, 3.5em, $migo-blue, $footer-nav-text, 0, $p-size - 0.3rem);
+
+    text-transform: none;
+    margin-bottom: 2em;
+
+    &:hover {
+      background: $migo-green;
+      color: $migo-blue;
+    }
+  }
+}
+
+.connect-form {
+  padding-top: 3em;
+}
+
+.connect-form, .add-payment {
+  .alert-danger {
+    text-align: left;
+  }
+}
+
+.connect-options {
+  text-align: left;
+}
+
+.select-services {
+  button {
+    @include button(12em, 3em, $migo-blue, $footer-nav-text, 0, $p-size - 0.3rem);
+
+    &:hover, &:focus {
+      background: $migo-green;
+      color: $migo-blue;
+    }
+  }
+
+  .nearby-services, .all-services {
+    ul {
+      padding-left: 0;
+      margin-top: 0.8em;
+      line-height: 2.8;
+      font-size: $p-size / 1.4;
+
+      li {
+        padding-left: 0.8em;
+        border-bottom: 1px solid lighten($footer-grey, 30%);
+      }
+
+      .last {
+        border-bottom: none;
+      }
+
+      .right {
+        text-align: right;
+        padding-bottom: 0;
+
+        span {
+          background: $migo-blue;
+          color: $footer-nav-text;
+          padding: 0.3em 0.7em;
+          border-radius: 15px;
+
+          &:hover, &:focus {
+            background: $migo-green;
+            color: $migo-blue;
+          }
+        }
+      }
+
+      .left, .right {
+        display: inline-block;
+        width: 50%;
+      }
+    }
+  }
+}

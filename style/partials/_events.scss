@@ -1,0 +1,18 @@
+@mixin on-keypad-event($border, $outline: 0) {
+  &:hover {
+    border: $border;
+    outline: $outline;
+    @content;
+  }
+}
+
+@mixin on-event($color, $text-decoration: none) {
+  &:hover,
+  &:active,
+  &:focus {
+    color: $color;
+    text-decoration: $text-decoration;
+    cursor: pointer;
+    @content;
+  }
+}

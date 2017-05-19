@@ -1,0 +1,254 @@
+$input-label-width: 30%;
+$border-radius-corner: 5px;
+
+.location-banner {
+  height: 52em;
+  background: $migo-blue;
+  text-align: center;
+
+  #location-header {
+    margin-top: 0;
+    padding-top: 2em;
+    font-size: 6rem;
+    margin-bottom: 0.8em;
+    font-weight: bolder;
+    letter-spacing: 0.03em;
+  }
+}
+
+  @mixin optional-at-root($sel) {
+    @at-root #{if(not &, $sel, selector-append(&, $sel))} {
+      @content;
+    }
+  }
+
+  @mixin placeholder {
+    @include optional-at-root('::-webkit-input-placeholder') {
+      @content;
+    }
+
+    @include optional-at-root(':-moz-placeholder') {
+      @content;
+    }
+
+    @include optional-at-root('::-moz-placeholder') {
+      @content;
+    }
+
+    @include optional-at-root(':-ms-input-placeholder') {
+      @content;
+    }
+  }
+
+  .search-input {
+    @include input(2rem, 0, 2.6em, $input-label-width, 0);
+
+    padding-left: 0.7em;
+    padding-bottom: 0.7em;
+    color: $footer-grey;
+
+    background-image: url($file-path);
+    background-repeat: no-repeat;
+    background-size: 2.5em 1.5em;
+    background-position: 21.5em 0.1em;
+
+    @include placeholder {
+      color: lighten($footer-grey, 40%);
+    }
+
+    &:focus {
+      outline-color: transparent;
+      outline-style: none;
+    }
+  }
+
+  .search-label {
+    width: $input-label-width;
+    background: $footer-nav-text;
+    text-align: left;
+    font-size: 1.4rem;
+    color: lighten($footer-grey, 20%);
+    margin-bottom: 0;
+    border-bottom: none;
+    padding-left: 1em;
+    padding-top: 1em;
+  }
+
+  .search-label.pickup {
+    border-top-left-radius: $border-radius-corner;
+    border-right: 1px solid $footer-grey;
+  }
+
+  .search-label.dropoff {
+    border-top-right-radius: $border-radius-corner;
+  }
+
+  .search-input.pickup {
+    border-bottom-left-radius: $border-radius-corner;
+    border-right: 1px solid $footer-grey;
+  }
+
+  .search-input.dropoff {
+    border-bottom-right-radius: $border-radius-corner;
+  }
+
+  .location-btn {
+    @include button(12em, 3em, $footer-nav-text, $migo-blue, 1.7em 1em 7em 0, 1.8rem);
+  }
+
+
+.location-sections {
+  width: 85%;
+  margin: auto;
+
+  .row.space {
+    margin-bottom: 5em;
+  }
+
+  .getting-around-location {
+    margin-top: 6em;
+    margin-bottom: 4em;
+  }
+
+  h2 {
+    font-weight: bold;
+    margin-bottom: 0.9em;
+  }
+
+  p {
+    font-size: 1.8rem;
+    margin-bottom: 2em;
+  }
+
+  .places-cards {
+    width: 100%;
+    margin-bottom: 2em;
+
+    .top-places {
+      width: 49%;
+      background: lighten($migo-blue, 20%);
+
+      .col-md-4 {
+        padding: 0;
+
+        .places-img {
+          width: 100%;
+          margin: 1em 0 1em;
+        }
+      }
+
+      .col-md-8 {
+        padding-right: 2em;
+
+        p {
+          margin-bottom: 1.5em;
+          font-size: $p-size / 1.2;
+        }
+
+        a {
+          font-size: $p-size / 1.2;
+        }
+      }
+
+    }
+
+    .left {
+      margin-right: 2%;
+    }
+  }
+
+  h5 {
+    color: $migo-green;
+    font-size: 2rem;
+    margin-top: 1em;
+    font-weight: bold;
+  }
+
+  #recent-rides {
+    margin-top: 6em;
+    margin-bottom: 6em;
+
+    .recent-rides-cards {
+      text-align: center;
+      font-size: $p-size;
+      width: 100%;
+      margin: auto;
+
+      .col-md-4 {
+        padding: 0;
+        width: 32%;
+        background: lightgrey;
+        margin-right: 1%;
+
+        p {
+          background: $footer-nav-text;
+          padding: 0.5em;
+        }
+
+        #start-route {
+          margin: 0.5em 0.5em 0.15em;
+        }
+
+        #end-route {
+          margin: 0em 0.5em 1em;
+        }
+
+        #provider {
+          background: none;
+          margin-bottom: 1em;
+        }
+
+        .view-route, #provider {
+          font-size: $p-size / 1.2;
+        }
+
+        .link-to-route {
+          background: $footer-grey;
+          padding: 1em;
+
+          a {
+            color: $footer-nav-text;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+#compare-rides {
+  height: 20em;
+  background: $migo-blue;
+
+  .row {
+    width: 60%;
+    margin: auto;
+    padding-top: 4em;
+  }
+
+  #compare-btn {
+    @include button(12em, 3em, $footer-nav-text, $migo-blue, 1.7em 1em 0 0, 1.8rem);
+  }
+}
+
+.search-fields {
+  background: lighten($footer-grey, 10%);
+  height: 14em;
+  text-align: center;
+  display: flex;
+  padding-top: 1.5%;
+
+  .geolocation {
+    width: 65%;
+    margin-left: 11%;
+
+    .search-input, .search-label {
+      width: 45%;
+    }
+  }
+
+  .location-btn {
+    margin: 0;
+    height: 4.7em;
+  }
+}
