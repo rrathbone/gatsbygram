@@ -40,6 +40,8 @@ class DefaultLayout extends React.Component {
     if (
       nextProps.location.pathname !== `/` &&
       nextProps.location.pathname !== `/about/` &&
+      nextProps.location.pathname !== `/careers/` &&
+      nextProps.location.pathname !== `/contact/` &&
       this.windowWidth > 750
     ) {
       // Freeze the background from scrolling.
@@ -68,6 +70,8 @@ class DefaultLayout extends React.Component {
     if (
       this.props.location.pathname !== `/` &&
       this.props.location.pathname !== `/about/` &&
+      this.props.location.pathname !== `/careers/` &&
+      this.props.location.pathname !== `/contact/` &&
       this.windowWidth > 750
     ) {
       isModal = true
@@ -141,6 +145,30 @@ class DefaultLayout extends React.Component {
               }}
             >
               About
+            </Link>
+            <Link
+              to="/careers/"
+              css={{
+                color: `inherit`,
+                display: `inline-block`,
+                float: `right`,
+                lineHeight: `35px`,
+                textDecoration: `none`,
+              }}
+            >
+              Careers
+            </Link>
+            <Link
+              to="/contact/"
+              css={{
+                color: `inherit`,
+                display: `inline-block`,
+                float: `right`,
+                lineHeight: `35px`,
+                textDecoration: `none`,
+              }}
+            >
+              Contact
             </Link>
           </div>
         </div>
